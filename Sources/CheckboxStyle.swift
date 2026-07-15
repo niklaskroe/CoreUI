@@ -6,9 +6,6 @@ public struct CheckboxStyle: ToggleStyle {
 
     public func makeBody(configuration: Configuration) -> some View {
         Button {
-            let impact = UIImpactFeedbackGenerator(style: .light)
-            impact.impactOccurred()
-            
             configuration.isOn.toggle()
         } label: {
             HStack(spacing: 12) {
