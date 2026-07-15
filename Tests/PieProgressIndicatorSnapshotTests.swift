@@ -11,7 +11,7 @@ final class PieProgressIndicatorSnapshotTests: XCTestCase {
     
     func testPieProgressIndicator_atVariousStates() {
         // 25% progress
-        let quarterView = PieProgressIndicatorView(progress: 0.25, themeColor: .blue)
+        let quarterView = PieProgressIndicatorView(progress: 0.25, themeColor: Color(red: 0.0, green: 0.5, blue: 1.0))
             .environment(\.colorScheme, .light)
         
         #if os(macOS)
@@ -27,7 +27,7 @@ final class PieProgressIndicatorSnapshotTests: XCTestCase {
         #endif
         
         // 100% progress
-        let fullView = PieProgressIndicatorView(progress: 1.0, themeColor: .green)
+        let fullView = PieProgressIndicatorView(progress: 1.0, themeColor: Color(red: 0.0, green: 0.8, blue: 0.0))
             .environment(\.colorScheme, .light)
         
         #if os(macOS)
