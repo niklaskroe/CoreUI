@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build (${{ matrix.platform }})
+    runs-on: macos-15
+    strategy:
+      matrix:
+        platform: [macOS, iOS]
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Build for macOS
+        if: matrix.platform == 'macOS'
+        run: swift build
+        
+      - name: Build for iOS
+        if: matrix.platform == 'iOS'
+        run: xcodebuild build -scheme CoreUI -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0'
+
+  test:
+    name: Test (${{ matrix.platform }})
+    runs-on: macos-15
+    needs: build
+    strategy:
+      matrix:
+        platform: [macOS, iOS]
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Test for macOS
+        if: matrix.platform == 'macOS'
+        run: swift test
+        
+      - name: Test for iOS
+        if: matrix.platform == 'iOS'
+        run: xcodebuild test -scheme CoreUI -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.0'
