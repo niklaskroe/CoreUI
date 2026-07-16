@@ -4,7 +4,7 @@ public struct CheckboxStyle: ToggleStyle {
     public var checkedColor: Color = .blue
     public var uncheckedColor: Color = .gray.opacity(0.5)
     
-    public init(checkedColor: Color, uncheckedColor: Color) {
+    public init(checkedColor: Color = .blue, uncheckedColor: Color = .gray.opacity(0.5)) {
         self.checkedColor = checkedColor
         self.uncheckedColor = uncheckedColor
     }

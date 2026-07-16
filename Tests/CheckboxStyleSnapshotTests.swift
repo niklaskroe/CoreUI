@@ -33,13 +33,13 @@ final class CheckboxStyleSnapshotTests: XCTestCase {
     
     func testCheckboxStyle_atVariousStates() {
         let uncheckedView = Toggle("Buy groceries", isOn: .constant(false))
-            .toggleStyle(CheckboxStyle())
+            .toggleStyle(CheckboxStyle(checkedColor: Color(red: 0.5, green: 0.5, blue: 1.0), uncheckedColor: Color(red: 1.0, green: 0.5, blue: 0.5)))
         
         assertCheckboxSnapshot(uncheckedView.environment(\.colorScheme, .light), named: "unchecked_light")
         assertCheckboxSnapshot(uncheckedView.environment(\.colorScheme, .dark), named: "unchecked_dark")
         
         let checkedView = Toggle("Clean room", isOn: .constant(true))
-            .toggleStyle(CheckboxStyle())
+            .toggleStyle(CheckboxStyle(checkedColor: Color(red: 1.0, green: 0.5, blue: 0.5), uncheckedColor: Color(red: 0.5, green: 0.5, blue: 1.0)))
         
         assertCheckboxSnapshot(checkedView.environment(\.colorScheme, .light), named: "checked_light")
         assertCheckboxSnapshot(checkedView.environment(\.colorScheme, .dark), named: "checked_dark")
