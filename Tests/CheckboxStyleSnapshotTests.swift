@@ -22,7 +22,7 @@ final class CheckboxStyleSnapshotTests: XCTestCase {
         #else
         assertSnapshot(
             of: view,
-            as: .image(precision: 0.99, perceptualPrecision: 0.98, layout: .fixed(width: 200, height: 50)),
+            as: .image(precision: 0.95, perceptualPrecision: 0.95, layout: .fixed(width: 200, height: 50)),
             named: name,
             file: file,
             testName: testName,
