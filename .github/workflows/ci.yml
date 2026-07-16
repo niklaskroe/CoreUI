@@ -28,6 +28,10 @@ jobs:
         if: matrix.platform == 'macOS'
         run: swift build
         
+      - name: Download iOS Simulator
+        if: matrix.platform == 'iOS'
+        run: xcodebuild -downloadPlatform iOS
+
       - name: Build for iOS
         if: matrix.platform == 'iOS'
         run: xcodebuild build -scheme CoreUI -destination 'platform=iOS Simulator,name=iPhone 16'
@@ -48,6 +52,10 @@ jobs:
         if: matrix.platform == 'macOS'
         run: swift test
         
+      - name: Download iOS Simulator
+        if: matrix.platform == 'iOS'
+        run: xcodebuild -downloadPlatform iOS
+
       - name: Test for iOS
         if: matrix.platform == 'iOS'
         run: xcodebuild test -scheme CoreUI -destination 'platform=iOS Simulator,name=iPhone 16'
