@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.0](https://github.com/niklaskroe/CoreUI/compare/v1.0.0...v1.1.0) (2026-07-16)
+
+
+### Features
+
+* add iOS Simulator download step in CI workflow ([33609c3](https://github.com/niklaskroe/CoreUI/commit/33609c3ede9a2628b5b89a2570093664c6dda73f))
+* custom checkbox style ([e6c85b8](https://github.com/niklaskroe/CoreUI/commit/e6c85b88df8a04473d5ae77c87f758bc040a0a2b))
+
+
+### Bug Fixes
+
+* add paths-ignore for CHANGELOG.md in CI workflow [skip ci] ([0263d6f](https://github.com/niklaskroe/CoreUI/commit/0263d6f4ab813cccef30ecb5081637aadec97926))
+* adjust snapshot precision for non-macOS environments ([88b7e9b](https://github.com/niklaskroe/CoreUI/commit/88b7e9bab818f3f1cbd7a857e250823d0540c476))
+* correct snapshots ([e9bff63](https://github.com/niklaskroe/CoreUI/commit/e9bff63654f1e09ba77ab92a6d5dde5a5e5e0be6))
+* correct snapshots ([5c35b94](https://github.com/niklaskroe/CoreUI/commit/5c35b9498ced5cefa649b5a5834c80d94817688a))
+* remove haptic feedback entirely ([1e18c0f](https://github.com/niklaskroe/CoreUI/commit/1e18c0f1231ab47881033668bfe93af161018241))
+* wake CoreSimulator daemon ([2e5948d](https://github.com/niklaskroe/CoreUI/commit/2e5948d91f7fe4585ef18a70af7aa537131a8b06))
+
 ## 1.0.0 (2026-07-15)
 
 
