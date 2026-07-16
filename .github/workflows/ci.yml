@@ -30,7 +30,9 @@ jobs:
         
       - name: Download iOS Simulator
         if: matrix.platform == 'iOS'
-        run: xcodebuild -downloadPlatform iOS
+        run: |
+          xcrun simctl list > /dev/null
+          xcodebuild -downloadPlatform iOS
 
       - name: Build for iOS
         if: matrix.platform == 'iOS'
@@ -54,7 +56,9 @@ jobs:
         
       - name: Download iOS Simulator
         if: matrix.platform == 'iOS'
-        run: xcodebuild -downloadPlatform iOS
+        run: |
+          xcrun simctl list > /dev/null
+          xcodebuild -downloadPlatform iOS
 
       - name: Test for iOS
         if: matrix.platform == 'iOS'
