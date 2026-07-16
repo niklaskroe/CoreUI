@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/niklaskroe/CoreUI/compare/v1.1.0...v1.1.1) (2026-07-16)
+
+
+### Bug Fixes
+
+* add default parameters for CheckboxStyle initializer and update snapshot tests ([816be52](https://github.com/niklaskroe/CoreUI/commit/816be5241b6e63183452b68ffa5893b3736a89ac))
+* provide public init for checkboxstyle ([33b2841](https://github.com/niklaskroe/CoreUI/commit/33b28419bb3ef27840b29b70f89bdce5de4492b3))
+
 ## [1.1.0](https://github.com/niklaskroe/CoreUI/compare/v1.0.0...v1.1.0) (2026-07-16)
 
 
