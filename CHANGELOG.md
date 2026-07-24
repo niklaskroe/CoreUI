@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/niklaskroe/CoreUI/compare/v1.1.1...v1.2.0) (2026-07-24)
+
+
+### Features
+
+* Expanding Icon Input v1 ([3bd0670](https://github.com/niklaskroe/CoreUI/commit/3bd0670a9fd5756e8d2303a38202b62c3a042b06))
+
 ## [1.1.1](https://github.com/niklaskroe/CoreUI/compare/v1.1.0...v1.1.1) (2026-07-16)
 
 
